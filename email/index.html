@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscreva-se - Curso de Paisagismo Digital</title>
+    <title>Inscrivez-vous - Cours de Paysagisme Digital</title>
     <style>
         * {
             margin: 0;
@@ -159,18 +159,19 @@
     </style>
 </head>
 <body>
-        <h1>Se inscreva colocando seu email no espaço abaixo</h1>
+    <div class="container">
+        <h1>Inscrivez-vous en entrant votre email ci-dessous</h1>
         
         <div class="form-container">
             <div class="input-group">
-                <label for="email"></label>
-                <input type="email" id="email" class="email-input" placeholder="Seu melhor email">
+                <label for="email">Votre email principal</label>
+                <input type="email" id="email" class="email-input" placeholder="Votre meilleur email">
             </div>
-            <button class="btn" id="submit-btn">Enviar</button>
+            <button class="btn" id="submit-btn">Envoyer</button>
         </div>
         
         <div class="success-message" id="success-message">
-            <p>Pronto, agora só verificar seu email!</p>
+            <p>Parfait, il ne vous reste plus qu'à vérifier votre email !</p>
         </div>
     </div>
 
@@ -183,16 +184,16 @@
             submitBtn.addEventListener('click', function() {
                 if (emailInput.value === '' || !emailInput.value.includes('@')) {
                     emailInput.style.border = '2px solid #ff4081';
-                    emailInput.placeholder = 'Por favor, insira um email válido';
+                    emailInput.placeholder = 'Veuillez saisir un email valide';
                     return;
                 }
                 
-                // Esconder o formulário e mostrar mensagem de sucesso
+                // Cacher le formulaire et afficher le message de succès
                 document.querySelector('.form-container').style.display = 'none';
                 successMessage.style.display = 'block';
             });
             
-            // Remover o destaque de erro quando o usuário começar a digitar
+            // Supprimer la mise en évidence de l'erreur lorsque l'utilisateur commence à taper
             emailInput.addEventListener('input', function() {
                 emailInput.style.border = 'none';
             });
